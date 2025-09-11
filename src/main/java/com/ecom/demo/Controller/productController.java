@@ -17,6 +17,10 @@ public class productController {
 
     @Autowired
     private productService service;
+     @GetMapping("/")
+    public String home() {
+        return "Backend is running!";
+    }
 
     @GetMapping("/products")
     public List<Product> getAllProducts() {
